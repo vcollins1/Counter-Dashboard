@@ -1,6 +1,12 @@
+import Counter from "./components/Counter.tsx";
+
 function App() {
     return (
-        "Counter Dashboard App"
+        <>
+            <Counter 
+                title="Test Counter"
+            />
+        </>
     )
 }
 
