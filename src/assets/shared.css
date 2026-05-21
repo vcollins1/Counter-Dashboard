@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    font-family: Inter, sans-serif;
+}
+
+.app {
+    --bg: #edf1f4;
+    --panel: #ffffff;
+    --panel-strong: #e4eaef;
+    --surface: #111518;
+    --text: #111518;
+    --muted: #60707c;
+    --line: #d4dde5;
+    --accent: #087f65;
+    --accent-strong: #0b624f;
+    --warning: #ad6b00;
+    --danger: #bc3934;
+}
