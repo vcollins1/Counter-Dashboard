@@ -18,6 +18,36 @@
     padding: 14px;
 }
 
+.controls {
+    display: flex;
+    gap: 16px;
+}
+
+.controls__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    font-weight: 800;
+    min-height: 42px;
+    padding: 0 16px;
+}
+
+.controls__btn:hover {
+    cursor: pointer;
+}
+
+.controls__btn--primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #07110e;
+}
+
+.controls__btn--secondary {
+    background: var(--panel);
+    color: var(--text);
+}
+
 .counters {
     display: grid;
     gap: 18px;

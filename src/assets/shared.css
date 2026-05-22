@@ -20,4 +20,10 @@
     --warning: #ad6b00;
     --danger: #bc3934;
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+    background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            var(--bg);
+    min-height: 100vh;
+    padding: 18px;
 }

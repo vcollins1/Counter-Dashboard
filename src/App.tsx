@@ -1,10 +1,10 @@
-import CounterPanel from "./components/CounterPanel.tsx";
+import Dashboard from "./components/Dashboard.tsx";
 import "./assets/shared.css";
 
 function App() {
     return (
         <div className="app">
-            <CounterPanel />
+            <Dashboard />
         </div>
     )
 }

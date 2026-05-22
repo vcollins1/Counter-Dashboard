@@ -12,6 +12,11 @@ function CounterPanel() {
                 </div>
                 <span className="counter-panel__chip">{activeCounters} online</span>
             </div>
+
+            <div className="controls">
+                <button className="controls__btn controls__btn--primary">+ Add Counter</button>
+                <button className="controls__btn controls__btn--secondary">Reset All</button>
+            </div>
             
             <div className="counters">
                 <Counter
