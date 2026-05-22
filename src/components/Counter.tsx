@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "../assets/counter.css";
 
 function Counter({title}: {title: string}) {
     const [count, setCount] = useState<number>(0)
@@ -26,7 +27,7 @@ function Counter({title}: {title: string}) {
             </div>
 
             <div className="counter__readout">
-                <span className="counter_count">{count}</span>
+                <span className="counter__count">{count}</span>
             </div>
             
             <div className="counter__meter">

@@ -1,0 +1,83 @@
+.counter {
+    background: linear-gradient(135deg, color-mix(var(--accent) 10%, transparent)), var(--panel);
+    border: 1px solid var(--line);
+    width: 260px;
+    padding: 18px;
+}
+
+.counter__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.counter__kicker {
+    color: var(--accent);
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.counter__title {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin-top: 4px;
+}
+
+.counter__count {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.counter__delete {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 1.35rem;
+    height: 36px;
+    width: 36px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.counter__delete:hover {
+    cursor: pointer;
+    background-color: var(--danger);
+    color: var(--panel);
+}
+
+.counter__controls {
+    background: var(--panel-strong);
+    border: 1px solid var(--line);
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1.6fr 1fr;
+    padding: 8px;
+}
+
+.counter__btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-weight: 900;
+    min-height: 44px;
+    padding: 0 12px;
+}
+
+.counter__btn:hover {
+    cursor: pointer;
+}
+
+.counter__btn--plus {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #07110e;
+    font-size: 1.45rem;
+}
+
+.counter__btn--minus {
+    color: var(--warning);
+    font-size: 1.45rem;
+}
