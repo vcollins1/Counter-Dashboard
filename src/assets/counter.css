@@ -101,3 +101,32 @@
     color: var(--warning);
     font-size: 1.45rem;
 }
+
+.counter__specs {
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding-top: 14px;
+}
+
+.counter__specs div {
+    display: grid;
+    gap: 2px;
+}
+
+.counter__specs div:last-child {
+    text-align: right;
+}
+
+.counter__specs dt {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.counter__specs dd {
+    font-size: 0.95rem;
+    font-weight: 800;
+}

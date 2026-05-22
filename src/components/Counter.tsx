@@ -43,6 +43,17 @@ function Counter({title, min, max, step}: {title: string, min: number, max: numb
                 <button className="counter__btn counter__btn--reset" onClick={handleReset}>Reset</button>
                 <button className="counter__btn counter__btn--minus" onClick={handleMinus}>-</button>
             </div>
+
+            <dl className="counter__specs">
+                <div>
+                    <dt>Step</dt>
+                    <dd>{step}</dd>
+                </div>
+                <div>
+                    <dt>State</dt>
+                    <dd>{count === max ? "Max" : count === min ? "Min" : "Nominal"}</dd>
+                </div>
+            </dl>
         </article>
     )
 }
