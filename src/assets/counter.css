@@ -3,6 +3,8 @@
     border: 1px solid var(--line);
     width: 260px;
     padding: 18px;
+    display: grid;
+    gap: 18px;
 }
 
 .counter__header {
@@ -46,6 +48,19 @@
     cursor: pointer;
     background-color: var(--danger);
     color: var(--panel);
+}
+
+.counter__meter {
+    background: var(--panel-strong);
+    height: 10px;
+    overflow: hidden;
+}
+
+.counter__meter span {
+    background: linear-gradient(90deg, var(--accent), var(--warning));
+    display: block;
+    height: 100%;
+    min-width: 3px;
 }
 
 .counter__controls {

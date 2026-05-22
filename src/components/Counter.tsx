@@ -3,6 +3,12 @@ import "../assets/counter.css";
 
 function Counter({title}: {title: string}) {
     const [count, setCount] = useState<number>(0)
+    const min = 0
+    const max = 20
+    const range = max - min
+    const meterProgress = Math.round(((count - min) / range) * 100)
+    
+    console.log(meterProgress)
     
     function handlePlus() {
         setCount(previous => previous + 1)
@@ -31,7 +37,7 @@ function Counter({title}: {title: string}) {
             </div>
             
             <div className="counter__meter">
-                <span></span>
+                <span style={{width: `${meterProgress}%`}}></span>
             </div>
             
             <div className="counter__controls">
