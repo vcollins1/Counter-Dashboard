@@ -8,6 +8,7 @@ function App() {
                 title="Test Counter"
                 min={0}
                 max={20}
+                step={2}
             />
         </div>
     )
