@@ -19,4 +19,5 @@
     --accent-strong: #0b624f;
     --warning: #ad6b00;
     --danger: #bc3934;
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
 }

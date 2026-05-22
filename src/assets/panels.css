@@ -1,0 +1,25 @@
+.counter-panel {
+    background: color-mix(in srgb, var(--panel) 96%, transparent);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    display: grid;
+    gap: 22px;
+}
+
+.counter-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-panel__chip {
+    border: 1px solid var(--line);
+    padding: 14px;
+}
+
+.counters {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
