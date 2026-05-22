@@ -1,21 +1,19 @@
 import {useState} from "react";
 import "../assets/counter.css";
 
-function Counter({title}: {title: string}) {
+function Counter({title, min, max}: {title: string, min: number, max: number}) {
     const [count, setCount] = useState<number>(0)
-    const min = 0
-    const max = 20
     const range = max - min
     const meterProgress = Math.round(((count - min) / range) * 100)
     
     console.log(meterProgress)
     
     function handlePlus() {
-        setCount(previous => previous + 1)
+        setCount(previous => previous == max ? previous : previous + 1)
     }
     
     function handleMinus() {
-        setCount(previous => previous - 1)
+        setCount(previous => previous == min ? previous : previous - 1)
     }
     
     function handleReset() {

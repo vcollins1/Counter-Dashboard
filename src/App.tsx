@@ -6,6 +6,8 @@ function App() {
         <div className="app">
             <Counter 
                 title="Test Counter"
+                min={0}
+                max={20}
             />
         </div>
     )
