@@ -1,8 +1,12 @@
 import Counter from "./Counter.tsx";
+import {initialCounters} from "../data/initialCounters.ts";
 import "../assets/panels.css"
 
 function CounterPanel() {
-    const activeCounters = 3;
+    const activeCounters = initialCounters.length;
+    const counterModules = initialCounters.map(counter => {
+        return <Counter title={counter.title} min={counter.min} max={counter.max} step={counter.step} />
+    });
     return (
         <section className="counter-panel">
             <div className="counter-panel__header">
@@ -19,26 +23,7 @@ function CounterPanel() {
             </div>
             
             <div className="counters">
-                <Counter
-                    title="Test Counter 1"
-                    min={0}
-                    max={20}
-                    step={2}
-                />
-
-                <Counter
-                    title="Test Counter 2"
-                    min={0}
-                    max={40}
-                    step={4}
-                />
-
-                <Counter
-                    title="Test Counter 3"
-                    min={0}
-                    max={60}
-                    step={6}
-                />
+                {counterModules}
             </div>
         </section>
     )
