@@ -1,25 +1,10 @@
-import {useState} from "react";
 import "../assets/counter.css";
-import type {CounterType} from "../utils/types.ts";
+import type {CounterFuncType, CounterType} from "../utils/types.ts";
 
-function Counter({title, min, max, step}: Omit<CounterType, "id">) {
-    const [count, setCount] = useState<number>(0)
+function Counter({id, title, count, min, max, step, plus, minus, reset}: CounterType & CounterFuncType) {
     const range = max - min
     const meterProgress = Math.round(((count - min) / range) * 100)
     
-    console.log(meterProgress)
-    
-    function handlePlus() {
-        setCount(previous => previous == max ? previous : previous + step)
-    }
-    
-    function handleMinus() {
-        setCount(previous => previous == min ? previous : previous - step)
-    }
-    
-    function handleReset() {
-        setCount(0)
-    }
     return (
         <article className="counter">
             <div className="counter__header">
@@ -40,9 +25,9 @@ function Counter({title, min, max, step}: Omit<CounterType, "id">) {
             </div>
             
             <div className="counter__controls">
-                <button className="counter__btn counter__btn--plus" onClick={handlePlus}>+</button>
-                <button className="counter__btn counter__btn--reset" onClick={handleReset}>Reset</button>
-                <button className="counter__btn counter__btn--minus" onClick={handleMinus}>-</button>
+                <button className="counter__btn counter__btn--plus" onClick={() => plus(id)}>+</button>
+                <button className="counter__btn counter__btn--reset" onClick={() => reset(id)}>Reset</button>
+                <button className="counter__btn counter__btn--minus" onClick={() => minus(id)}>-</button>
             </div>
 
             <dl className="counter__specs">

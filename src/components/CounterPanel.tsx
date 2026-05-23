@@ -1,11 +1,23 @@
 import Counter from "./Counter.tsx";
-import {initialCounters} from "../data/initialCounters.ts";
 import "../assets/panels.css"
+import type {CounterFuncType, CounterType} from "../utils/types.ts";
 
-function CounterPanel() {
-    const activeCounters = initialCounters.length;
-    const counterModules = initialCounters.map(counter => {
-        return <Counter key={counter.id} title={counter.title} min={counter.min} max={counter.max} step={counter.step} />
+function CounterPanel({counters, plus, minus, reset}: {counters: CounterType[]} & CounterFuncType) {
+    
+    const activeCounters = counters.length;
+    const counterModules = counters.map(counter => {
+        return <Counter 
+            key={counter.id}
+            id={counter.id}
+            title={counter.title} 
+            count={counter.count} 
+            min={counter.min} 
+            max={counter.max} 
+            step={counter.step}
+            plus={plus}
+            minus={minus}
+            reset={reset}
+        />
     });
     return (
         <section className="counter-panel">
