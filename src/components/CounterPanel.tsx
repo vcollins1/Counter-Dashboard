@@ -2,7 +2,7 @@ import Counter from "./Counter.tsx";
 import "../assets/panels.css"
 import type {CounterFuncType, CounterType} from "../utils/types.ts";
 
-function CounterPanel({counters, plus, minus, reset}: {counters: CounterType[]} & CounterFuncType) {
+function CounterPanel({counters, plus, minus, reset, onDelete}: {counters: CounterType[]} & CounterFuncType) {
     
     const activeCounters = counters.length;
     const counterModules = counters.map(counter => {
@@ -17,6 +17,7 @@ function CounterPanel({counters, plus, minus, reset}: {counters: CounterType[]} 
             plus={plus}
             minus={minus}
             reset={reset}
+            onDelete={onDelete}
         />
     });
     return (

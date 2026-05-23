@@ -10,5 +10,6 @@ export type CounterType = {
 export type CounterFuncType = {
     plus: (id: number) => void,
     minus: (id: number) => void,
-    reset: (id: number) => void
+    reset: (id: number) => void,
+    onDelete: (id: number) => void
 }

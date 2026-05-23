@@ -1,7 +1,7 @@
 import "../assets/counter.css";
 import type {CounterFuncType, CounterType} from "../utils/types.ts";
 
-function Counter({id, title, count, min, max, step, plus, minus, reset}: CounterType & CounterFuncType) {
+function Counter({id, title, count, min, max, step, plus, minus, reset, onDelete}: CounterType & CounterFuncType) {
     const range = max - min
     const meterProgress = Math.round(((count - min) / range) * 100)
     
@@ -13,7 +13,7 @@ function Counter({id, title, count, min, max, step, plus, minus, reset}: Counter
                     <h3 className="counter__title">{title}</h3>
                 </div>
 
-                <button className="counter__delete">X</button>
+                <button className="counter__delete" onClick={() => onDelete(id)}>X</button>
             </div>
 
             <div className="counter__readout">

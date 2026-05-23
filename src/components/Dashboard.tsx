@@ -40,6 +40,12 @@ function Dashboard() {
             })
         })
     }
+    
+    function handleDelete(id: number) {
+        setCounters(previous => {
+            return previous.filter(counter => counter.id != id)
+        })
+    }
     return (
         <div className="dashboard">
             <main className="dashboard__panels">
@@ -48,6 +54,7 @@ function Dashboard() {
                     plus={handlePlus}
                     minus={handleMinus}
                     reset={handleReset}
+                    onDelete={handleDelete}
                 />
             </main>
         </div>
