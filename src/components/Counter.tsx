@@ -1,7 +1,8 @@
 import {useState} from "react";
 import "../assets/counter.css";
+import type {CounterType} from "../utils/types.ts";
 
-function Counter({title, min, max, step}: {title: string, min: number, max: number, step: number}) {
+function Counter({title, min, max, step}: Omit<CounterType, "id">) {
     const [count, setCount] = useState<number>(0)
     const range = max - min
     const meterProgress = Math.round(((count - min) / range) * 100)

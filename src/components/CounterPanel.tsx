@@ -5,7 +5,7 @@ import "../assets/panels.css"
 function CounterPanel() {
     const activeCounters = initialCounters.length;
     const counterModules = initialCounters.map(counter => {
-        return <Counter title={counter.title} min={counter.min} max={counter.max} step={counter.step} />
+        return <Counter key={counter.id} title={counter.title} min={counter.min} max={counter.max} step={counter.step} />
     });
     return (
         <section className="counter-panel">
