@@ -2,7 +2,7 @@ import Counter from "./Counter.tsx";
 import "../assets/panels.css"
 import type {CounterFuncType, CounterType} from "../utils/types.ts";
 
-function CounterPanel({counters, plus, minus, reset, onDelete}: {counters: CounterType[]} & CounterFuncType) {
+function CounterPanel({counters, plus, minus, reset, onDelete, resetAll}: {counters: CounterType[], resetAll: () => void} & CounterFuncType) {
     
     const activeCounters = counters.length;
     const counterModules = counters.map(counter => {
@@ -32,7 +32,7 @@ function CounterPanel({counters, plus, minus, reset, onDelete}: {counters: Count
 
             <div className="controls">
                 <button className="controls__btn controls__btn--primary">+ Add Counter</button>
-                <button className="controls__btn controls__btn--secondary">Reset All</button>
+                <button className="controls__btn controls__btn--secondary" onClick={resetAll}>Reset All</button>
             </div>
             
             <div className="counters">
