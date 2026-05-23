@@ -13,15 +13,6 @@
     gap: 14px;
 }
 
-.counter__kicker {
-    color: var(--accent);
-    display: block;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0;
-    text-transform: uppercase;
-}
-
 .counter__title {
     font-size: 1.25rem;
     line-height: 1.1;

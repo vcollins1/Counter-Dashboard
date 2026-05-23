@@ -9,7 +9,7 @@ function Counter({id, title, count, min, max, step, plus, minus, reset, onDelete
         <article className="counter">
             <div className="counter__header">
                 <div>
-                    <span className="counter__kicker">Module</span>
+                    <span className="kicker">Module</span>
                     <h3 className="counter__title">{title}</h3>
                 </div>
 

@@ -2,10 +2,12 @@ import {useState} from "react";
 import CounterPanel from "./CounterPanel.tsx";
 import {initialCounters} from "../data/initialCounters.ts";
 import "../assets/dashboard.css"
+import CounterForm from "./CounterForm.tsx";
+import type {CounterType} from "../utils/types.ts";
 
 function Dashboard() {
     const [counters, setCounters] = useState(initialCounters)
-    function handlePlus(id: number) {
+    function handlePlus(id: string) {
         setCounters(previous => {
             return previous.map(counter => {
                 if (counter.id === id) {
@@ -17,7 +19,7 @@ function Dashboard() {
         })
     }
 
-    function handleMinus(id: number) {
+    function handleMinus(id: string) {
         setCounters(previous => {
             return previous.map(counter => {
                 if (counter.id === id) {
@@ -29,7 +31,7 @@ function Dashboard() {
         })
     }
 
-    function handleReset(id: number) {
+    function handleReset(id: string) {
         setCounters(previous => {
             return previous.map(counter => {
                 if (id === counter.id) {
@@ -41,7 +43,13 @@ function Dashboard() {
         })
     }
     
-    function handleDelete(id: number) {
+    function handleAddCounter(counter: CounterType) {
+        setCounters(previous => {
+            return [...previous, counter]
+        })
+    }
+    
+    function handleDelete(id: string) {
         setCounters(previous => {
             return previous.filter(counter => counter.id != id)
         })
@@ -54,6 +62,9 @@ function Dashboard() {
     }
     return (
         <div className="dashboard">
+            <CounterForm
+                onAdd={handleAddCounter}
+            />
             <main className="dashboard__panels">
                 <CounterPanel 
                     counters={counters}

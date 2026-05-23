@@ -27,3 +27,12 @@
     min-height: 100vh;
     padding: 18px;
 }
+
+.kicker {
+    color: var(--accent);
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}

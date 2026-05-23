@@ -1,0 +1,35 @@
+.form {
+    background-color: var(--panel);
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+}
+
+.form__grid {
+    display: grid;
+    gap: 14px;
+}
+
+.form__grid label {
+    display: grid;
+    gap: 8px;
+    text-transform: uppercase;
+}
+
+.form__grid input {
+    min-height: 44px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    color: var(--text);
+    padding: 0 8px;
+}
+
+.form__controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.form__controls button {
+    padding: 10px 18px;
+}

@@ -1,5 +1,5 @@
 export type CounterType = {
-    id: number,
+    id: string,
     title: string,
     count: number,
     min: number,
@@ -8,8 +8,8 @@ export type CounterType = {
 }
 
 export type CounterFuncType = {
-    plus: (id: number) => void,
-    minus: (id: number) => void,
-    reset: (id: number) => void,
-    onDelete: (id: number) => void
+    plus: (id: string) => void,
+    minus: (id: string) => void,
+    reset: (id: string) => void,
+    onDelete: (id: string) => void
 }

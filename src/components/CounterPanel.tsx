@@ -24,7 +24,7 @@ function CounterPanel({counters, plus, minus, reset, onDelete, resetAll}: {count
         <section className="counter-panel">
             <div className="counter-panel__header">
                 <div>
-                    <span>modules</span>
+                    <span className="kicker">modules</span>
                     <h2>Counters</h2>
                 </div>
                 <span className="counter-panel__chip">{activeCounters} online</span>
