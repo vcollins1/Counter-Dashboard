@@ -3,7 +3,7 @@ import React from "react";
 import type {CounterType} from "../utils/types.ts";
 import "../assets/counterForm.css"
 
-function CounterForm({onAdd}: {onAdd: (counter: CounterType) => void}) {
+function CounterForm({onAdd, toggle}: {onAdd: (counter: CounterType) => void, toggle: () => void}) {
     function handleCounterFormSubmit(event: React.SubmitEvent) {
         event.preventDefault()
         
@@ -25,6 +25,7 @@ function CounterForm({onAdd}: {onAdd: (counter: CounterType) => void}) {
         }
         
         onAdd(newCount)
+        toggle()
         event.target.reset()
     }
     return (
@@ -62,7 +63,7 @@ function CounterForm({onAdd}: {onAdd: (counter: CounterType) => void}) {
             </div>
             
             <div className="form__controls">
-                <button type="button" className="controls__btn controls__btn--secondary">cancel</button>
+                <button type="button" className="controls__btn controls__btn--secondary" onClick={toggle}>cancel</button>
                 <button type="submit" className="controls__btn controls__btn--primary">add module</button>
             </div>
         </form>

@@ -36,3 +36,14 @@
     letter-spacing: 0;
     text-transform: uppercase;
 }
+
+.modal {
+    align-items: center;
+    background: rgba(5, 8, 11, 0.74);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    padding: 24px;
+    position: fixed;
+    z-index: 20;
+}

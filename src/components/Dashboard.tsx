@@ -2,11 +2,17 @@ import {useState} from "react";
 import CounterPanel from "./CounterPanel.tsx";
 import {initialCounters} from "../data/initialCounters.ts";
 import "../assets/dashboard.css"
-import CounterForm from "./CounterForm.tsx";
 import type {CounterType} from "../utils/types.ts";
+import CounterFormModal from "./CounterFormModal.tsx";
 
 function Dashboard() {
     const [counters, setCounters] = useState(initialCounters)
+    const [modal, setModal] = useState(false)
+    
+    function toggleModal() {
+        setModal(previous => !previous)
+    }
+    
     function handlePlus(id: string) {
         setCounters(previous => {
             return previous.map(counter => {
@@ -62,9 +68,7 @@ function Dashboard() {
     }
     return (
         <div className="dashboard">
-            <CounterForm
-                onAdd={handleAddCounter}
-            />
+            {modal && <CounterFormModal onAdd={handleAddCounter} toggle={toggleModal}/>}
             <main className="dashboard__panels">
                 <CounterPanel 
                     counters={counters}
@@ -73,6 +77,7 @@ function Dashboard() {
                     reset={handleReset}
                     onDelete={handleDelete}
                     resetAll={handleResetAll}
+                    toggle={toggleModal}
                 />
             </main>
         </div>
