@@ -36,7 +36,12 @@ function CounterPanel({counters, plus, minus, reset, onDelete, resetAll, toggle}
             </div>
             
             <div className="counters">
-                {counterModules}
+                {counters.length > 0 ? counterModules : (
+                    <div className="counters__empty">
+                        <h3>No counters online</h3>
+                        <p>Add a counter module to start tracking a new signal.</p>
+                    </div>
+                )} 
             </div>
         </section>
     )
