@@ -1,0 +1,10 @@
+GET http://localhost:5121/counter
+
+###
+POST http://localhost:5121/counter
+
+###
+PUT http://localhost:5121/counter/1
+
+###
+DELETE http://localhost:5121/counter/1
