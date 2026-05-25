@@ -1,10 +1,31 @@
 GET http://localhost:5121/counter
 
 ###
+GET http://localhost:5121/counter/1
+
+###
 POST http://localhost:5121/counter
+Content-Type: application/json
+
+{
+  "Title": "Reading",
+  "Count": 0,
+  "Min": 0,
+  "Max": 200,
+  "Step": 20
+}
 
 ###
-PUT http://localhost:5121/counter/1
+PUT http://localhost:5121/counter/4
+Content-Type: application/json
+
+{
+  "Title": "Reading",
+  "Count": 120,
+  "Min": 0,
+  "Max": 200,
+  "Step": 20
+}
 
 ###
-DELETE http://localhost:5121/counter/1
+DELETE http://localhost:5121/counter/4
