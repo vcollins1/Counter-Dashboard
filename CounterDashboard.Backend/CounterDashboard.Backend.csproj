@@ -7,4 +7,13 @@
         <RootNamespace>CounterDashboard.Backend</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.1.79" />
+      <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Data/Scripts/initDb.sql" />
+    </ItemGroup>
+
 </Project>

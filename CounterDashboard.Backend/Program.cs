@@ -1,8 +1,11 @@
+using CounterDashboard.Backend.Data;
 using CounterDashboard.Backend.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+builder.AddDatabase();
 
+var app = builder.Build();
 app.UseCounterEndpoints();
+await app.InitDb();
 
 app.Run();
