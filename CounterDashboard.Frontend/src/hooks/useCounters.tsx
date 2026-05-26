@@ -1,7 +1,7 @@
 import {useState} from "react"
 import type {CounterType} from "../utils/types.ts";
  
-function UseCounters(initialCounters: CounterType) {
+function useCounters(initialCounters: CounterType[]) {
     const [counters, setCounters] = useState(initialCounters)
 
     function handlePlus(id: string) {
@@ -69,4 +69,4 @@ function UseCounters(initialCounters: CounterType) {
     }
 }
 
-export default UseCounters
+export default useCounters

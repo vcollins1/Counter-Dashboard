@@ -1,4 +1,4 @@
-import useCounters from "../hooks/UseCounters.tsx"
+import useCounters from "../hooks/useCounters.tsx"
 import useModal from "../hooks/useModal.tsx"
 import CounterPanel from "./CounterPanel.tsx";
 import {initialCounters} from "../data/initialCounters.ts";
