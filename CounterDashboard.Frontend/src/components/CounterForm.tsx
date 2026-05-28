@@ -1,9 +1,8 @@
-import {nanoid} from "nanoid";
 import React from "react";
-import type {CounterType} from "../utils/types.ts";
+import type {NewCounterType} from "../utils/types.ts";
 import "../assets/counterForm.css"
 
-function CounterForm({onAdd, toggle}: {onAdd: (counter: CounterType) => void, toggle: () => void}) {
+function CounterForm({onAdd, toggle}: {onAdd: (counter: NewCounterType) => void, toggle: () => void}) {
     function handleCounterFormSubmit(event: React.SubmitEvent) {
         event.preventDefault()
         
@@ -15,8 +14,7 @@ function CounterForm({onAdd, toggle}: {onAdd: (counter: CounterType) => void, to
         const max = Math.min(Number(data.get("max")), 100);
         const step = Math.max(Number(data.get("step")), 1);
         
-        const newCount: CounterType = {
-            id: nanoid(),
+        const newCount: NewCounterType = {
             title,
             count,
             min,

@@ -1,7 +1,6 @@
-import useCounters from "../hooks/useCounters.tsx"
-import useModal from "../hooks/useModal.tsx"
+import useCounters from "../hooks/useCounters.ts"
+import useModal from "../hooks/useModal.ts"
 import CounterPanel from "./CounterPanel.tsx";
-import {initialCounters} from "../data/initialCounters.ts";
 import "../assets/dashboard.css"
 import CounterFormModal from "./CounterFormModal.tsx";
 
@@ -14,7 +13,7 @@ function Dashboard() {
        handleAddCounter,
        handleDelete,
        handleResetAll
-   } = useCounters(initialCounters)
+   } = useCounters()
     
     const {
         modal,
