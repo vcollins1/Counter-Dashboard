@@ -10,9 +10,10 @@ function CounterForm({onAdd, toggle}: {onAdd: (counter: NewCounterType) => void,
         
         const title = data.get("title")?.toString().trim() ?? ""
         const count = Math.max(Number(data.get("count")), 0);
-        const min = Math.max(Number(data.get("min")), 0);
-        const max = Math.min(Number(data.get("max")), 100);
         const step = Math.max(Number(data.get("step")), 1);
+        const min = Math.max(Number(data.get("min")), 0);
+        const max = Math.max(Number(data.get("max")), min + step);
+        
         
         const newCount: NewCounterType = {
             title,
